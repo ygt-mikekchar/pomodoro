@@ -295,7 +295,8 @@ case "$ARG" in
             [ $(hostname) == "$POMODORO_NOSYNC_NAME" ] || \
             ! "${POMODORO_REMOTE_CMD[@]}" start -m ${POMODORO_MINUTES} >/dev/null 2>&1
         then
-            read_status
+            # FIXME:  This probably isn't needed
+            # read_status
             P_START=$NOW
             P_DURATION=$POMODORO_MINUTES
             if [ -z "$P_FIRST" ]; then
